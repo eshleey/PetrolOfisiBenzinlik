@@ -979,7 +979,7 @@ GameObject:
   - component: {fileID: 1805669318}
   m_Layer: 0
   m_Name: Point
-  m_TagString: Point
+  m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1083,7 +1083,7 @@ GameObject:
   - component: {fileID: 2025036533}
   - component: {fileID: 2025036532}
   m_Layer: 0
-  m_Name: Point (1)
+  m_Name: Connect
   m_TagString: Connect
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1169,7 +1169,7 @@ Transform:
   m_GameObject: {fileID: 2025036531}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.83, y: 1.355, z: 0}
+  m_LocalPosition: {x: -2.974, y: 1.355, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1448,7 +1448,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a5b97e57c9e821d409a7e8837a97c839, type: 2}
+  - {fileID: 2100000, guid: f81de26ec932d1d47b045dfdf2b11eae, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1551,7 +1551,6 @@ GameObject:
   - component: {fileID: 261591935817973325}
   - component: {fileID: 7551537342347975788}
   - component: {fileID: 2351352497650252503}
-  - component: {fileID: 2315105726794441163}
   m_Layer: 0
   m_Name: Pompa Hortumu
   m_TagString: Untagged
@@ -1578,18 +1577,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2315105726794441163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1990880164142341115}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!136 &2351352497650252503
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1790,9 +1777,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3690265607612386367}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 3ef6c7044e5fa644e82a341cb1f827d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gazPompasi: {fileID: 5675136153771107736}
+  hortumUc: {fileID: 2590245927006731352}
+  lineRenderer: {fileID: 1952071857555932105}
+  pompaHortumu: {fileID: 1990880164142341115}
 --- !u!33 &3609353319664500410
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1815,7 +1806,7 @@ GameObject:
   - component: {fileID: 3856532872777909198}
   m_Layer: 0
   m_Name: Pompa
-  m_TagString: Pump
+  m_TagString: Point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1835,7 +1826,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2176,9 +2167,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6599416980284551324}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 8df937d923f9a584da9755d87540134c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lineRenderer: {fileID: 1952071857555932105}
+  startPoint: {fileID: 2590245927006731352}
 --- !u!23 &6001558751200769178
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2411,7 +2404,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6831e9e4c95fded4b9d89021c2224026, type: 2}
+  - {fileID: 2100000, guid: 5ea0925bed1be06418874f9a8f5673f5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2475,7 +2468,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a5b97e57c9e821d409a7e8837a97c839, type: 2}
+  - {fileID: 2100000, guid: f81de26ec932d1d47b045dfdf2b11eae, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2620,7 +2613,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9300b6c270fda3e4bba61c018b60eca0, type: 2}
+  - {fileID: 2100000, guid: 2f69fc43e6c5db24ea1f9ea656467ad6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

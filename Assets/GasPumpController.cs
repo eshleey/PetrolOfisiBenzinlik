@@ -11,7 +11,6 @@ public class LineRendererController : MonoBehaviour
         {
             lineRenderer.positionCount = 2;  // Çizgi iki noktadan oluþur
             lineRenderer.SetPosition(0, startPoint.position);  // Baþlangýç noktasýný ayarla
-            lineRenderer.SetPosition(1, startPoint.position);  // Hedef noktasýný baþlangýç noktasýna ayarla
         }
     }
 }

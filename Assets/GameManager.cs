@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -8,18 +6,15 @@ public class GameManager : MonoBehaviour
     public GameObject connectObject;
 
     private bool isPointAttached = false;
-    private GameObject attachedTo;
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == pointObject && !isPointAttached)
+        if (other.gameObject.CompareTag("Point") && !isPointAttached)
         {
-           
             AttachPointToCube();
         }
-        else if (other.gameObject == connectObject && isPointAttached)
+        else if (other.gameObject.CompareTag("Connect") && isPointAttached)
         {
-          
             AttachPointToConnect();
         }
     }
@@ -29,7 +24,6 @@ public class GameManager : MonoBehaviour
       
         pointObject.transform.SetParent(transform);
         isPointAttached = true;
-        attachedTo = gameObject;
         Debug.Log("Point nesnesi Cube'a baðlandý.");
     }
 
