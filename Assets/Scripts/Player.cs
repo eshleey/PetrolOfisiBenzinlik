@@ -1,14 +1,10 @@
-
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class CubeController : MonoBehaviour
+public class Player : MonoBehaviour
 {
     public float moveSpeed = 5f;
-   
-
-    void Update()
+  
+    private void Update()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
@@ -17,14 +13,4 @@ public class CubeController : MonoBehaviour
 
         transform.Translate(movement * moveSpeed * Time.deltaTime, Space.World);
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Point"))
-        {
-            other.transform.SetParent(transform);
-        }
-    }
-
- 
 }
