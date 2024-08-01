@@ -152,8 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e6c33cf3e36df144a4f06fb4934a6de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pumpObject: {fileID: 4248355451125149223}
-  pointObject: {fileID: 1626831778}
+  pumpTransform: {fileID: 4248355451125149223}
+  pointTransform: {fileID: 1626831778}
   tanker: {fileID: 964131438}
 --- !u!65 &211153020
 BoxCollider:
@@ -687,11 +687,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gasoline: {fileID: 964131433}
-  fillAmount: 0
-  defaultCapacity: 1
-  maxCapacity: 250
+  fillAmount: 0.7
+  currentCapacity: 0
+  maxCapacity: 100
   Point: {fileID: 1626831775}
   fillRate: 20
+  gasFilling: 0
 --- !u!1 &1127220467
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,9 +975,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50c45932b9175264ab19482535a74ac7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pumpObject: {fileID: 4248355451125149223}
-  playerObject: {fileID: 1538991453}
-  _tanker: {fileID: 0}
+  pumpTransform: {fileID: 4248355451125149223}
+  playerTransform: {fileID: 1538991453}
+  tanker: {fileID: 964131438}
 --- !u!65 &1626831777
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2213,7 +2214,7 @@ GameObject:
   - component: {fileID: 4383316590875480872}
   m_Layer: 0
   m_Name: Pump
-  m_TagString: Untagged
+  m_TagString: Pump
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

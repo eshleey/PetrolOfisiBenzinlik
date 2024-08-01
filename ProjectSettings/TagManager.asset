@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Point
   - Connect
+  - Pump
   layers:
   - Default
   - TransparentFX
