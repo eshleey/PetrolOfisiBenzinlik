@@ -688,6 +688,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gasoline: {fileID: 964131433}
   fillAmount: 0
+  defaultCapacity: 1
+  maxCapacity: 250
+  Point: {fileID: 1626831775}
+  fillRate: 20
 --- !u!1 &1127220467
 GameObject:
   m_ObjectHideFlags: 0
@@ -972,6 +976,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pumpObject: {fileID: 4248355451125149223}
   playerObject: {fileID: 1538991453}
+  _tanker: {fileID: 0}
 --- !u!65 &1626831777
 BoxCollider:
   m_ObjectHideFlags: 0
