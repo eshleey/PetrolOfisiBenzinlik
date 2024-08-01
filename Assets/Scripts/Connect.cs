@@ -2,20 +2,17 @@ using UnityEngine;
 
 public class Connect : MonoBehaviour
 {
-    public Transform pumpObject;
-    public Transform pointObject;
+    public Transform pumpTransform;
+    public Transform pointTransform;
     public Tanker tanker;
-    
-
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Pump"))
         {
-            pumpObject.SetParent(transform);
-            pumpObject.localPosition = Vector3.zero;
-            gameObject.GetComponent<Collider>().isTrigger = false;
-            tanker.GasStartFilling(); 
+            other.transform.SetParent(transform);
+            other.transform.localPosition = Vector3.zero;
+            tanker.GasStartFilling();
         }
     }
 
@@ -23,17 +20,18 @@ public class Connect : MonoBehaviour
     {
         if (tanker.fillAmount == 0)
         {
-            gameObject.GetComponent<Collider>().isTrigger = true;   
+            gameObject.GetComponent<Collider>().isTrigger = true;
         }
         else if (tanker.fillAmount == 1)
         {
             tanker.GasStopFilling();
-            pumpObject.SetParent(pointObject);
-            pumpObject.localPosition = Vector3.zero;
-
-           
+            pumpTransform.SetParent(pointTransform);
+            pumpTransform.localPosition = Vector3.zero;
+            gameObject.GetComponent<Collider>().isTrigger = false;
+        }
+        else
+        {
+            gameObject.GetComponent<Collider>().isTrigger = true;
         }
     }
-
-
 }
